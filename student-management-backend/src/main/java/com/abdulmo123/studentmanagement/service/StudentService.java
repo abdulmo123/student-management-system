@@ -28,8 +28,6 @@ public class StudentService {
     }
 
     public Student addStudent(Student student) {
-//        Random rand = new Random();
-//        student.setStudentId(rand.nextLong((9999 - 100) + 1) + 10);
         student.setStudentId(1000 + new Random().nextLong(9000));
         return studentRepository.save(student);
     }
