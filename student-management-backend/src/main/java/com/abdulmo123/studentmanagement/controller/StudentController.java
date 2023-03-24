@@ -28,7 +28,7 @@ public class StudentController {
     }
 
     @GetMapping("/find/{id}")
-    public ResponseEntity<Student> getEmployeeById(@PathVariable("id") Long id) throws StudentNotFoundException {
+    public ResponseEntity<Student> getStudentById(@PathVariable("id") Long id) throws StudentNotFoundException {
         Student student = studentService.findStudentById(id);
         return new ResponseEntity<>(student, HttpStatus.OK);
     }
